@@ -4,11 +4,11 @@
 
 ?toplevel: declaration*
 
-?declaration: entity_declaration
+?declaration: entity_declaration -> entity_declaration
               | containment_declaration
               | channel_declaration
               | separator_declaration
-              | require_declaration
+              | require_declaration -> require_declaration
 
 ?entity_declaration: "(" "entity" entity_id ")"
 ?containment_declaration: "(" "containment" entity_id entity_id ")" 
@@ -26,7 +26,7 @@
               | disj_requirement
 
 ?must_contain_requirement: "(" "must_contain" entity_id entity_id ")"
-?must_be_separated_requirement: "(" "must_be_separated" entity_id entity_id ")"
+?must_be_separated_requirement: "(" "must_be_separated" entity_id (entity_id)+ ")"
 ?can_communicate_requirement: "(" "can_communicate" entity_id entity_id ")"
 ?must_filter_requirement: "(" "must_filter" entity_id entity_id entity_id ")"
 ?neg_requirement: "(" "neg" requirement ")"
