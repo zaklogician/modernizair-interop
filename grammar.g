@@ -7,7 +7,7 @@
 ?declaration: entity_declaration -> entity_declaration
               | containment_declaration
               | channel_declaration
-              | separator_declaration
+              | separator_declaration -> separator_declaration
               | require_declaration -> require_declaration
 
 ?entity_declaration: "(" "entity" entity_id ")"
