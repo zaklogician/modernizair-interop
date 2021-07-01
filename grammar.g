@@ -1,6 +1,6 @@
 // Copyright 2021, Data61, CSIRO (ABN 41 687 119 230)
 
-?start: toplevel
+?start: toplevel -> toplevel
 
 ?toplevel: declaration*
 
