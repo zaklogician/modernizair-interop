@@ -21,7 +21,7 @@
               | must_be_separated_requirement
               | can_communicate_requirement
               | must_filter_requirement
-              | neg_requirement
+              | neg_requirement -> neg_requirement
               | conj_requirement
               | disj_requirement
 
